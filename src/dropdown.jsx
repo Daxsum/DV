@@ -8,9 +8,10 @@ export default function dropdown({ color, animation }) {
     <div className="dropdown-wrapper relative m-8">
       <button
         onClick={() => setShow(!show)}
-        className={`bg-${color}-500 text-white font-bold py-2 px-4 whitespace-no-wrap rounded transition duration-300`}
+        className={`bg-${color}-500 text-white font-bold py-2 px-4 flex gap-2 whitespace-no-wrap rounded transition duration-300`}
       >
-        English <i className="fas fa-chevron-down ml-2"></i>
+        <img src="/US.svg" alt="" /> English{" "}
+        <i className="fas fa-chevron-down ml-2"></i>
       </button>
       {show && (
         <div
