@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/navbar";
+import FAQ from "./faq";
 
 function App() {
   const [Timeleft, setTimeleft] = useState([
@@ -68,53 +69,7 @@ function App() {
       // ]);
     }, 1000);
   }, []);
-  const trs = [
-    {
-      freeType: " Family Sponsorship Form (I-130)",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: " Green Card Application Form (I-485)",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: " Financial Support Form (I-864)",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: " Work Permit Application Form (I-765) (optional)",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: " Travel Permit Application Form (I-131) (optional)",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: "State Department Processing",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: "USCIS Immigrant Fee",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: "Medical Examination",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-    {
-      freeType: "Total",
-      cost: "$535",
-      costAbroad: "$535",
-    },
-  ];
+
   return (
     <>
       <div className=" flex flex-col justify-start w-full h-full bg-cover bg-[url('/home.gif')]">
@@ -267,63 +222,8 @@ function App() {
         <p className="mt-[5rem] ml-[7.12rem] text-xl font-medium text-gray-900 whitespace-nowrap">
           Find the right visa for you!
         </p>
-        <h1 className=" mt-[4.37rem] mb-[3.21rem] ml-[4.95rem] text-5xl not-italic font-light text-[#4AC97D]">
-          Diversity Visa Cost
-        </h1>
-        <div className="ml-[15rem] mr-[18rem] rounded-3xl bg-white">
-          <div class="flex flex-col">
-            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                <div class="overflow-hidden p-8">
-                  <div className="flex justify-between">
-                    <p className="ml-2 text-sm font-medium text-gray-900 whitespace-nowrap">
-                      Mandatory Government Fees for Green Cards
-                    </p>{" "}
-                    <button className="w-[12.75rem] bg-[#FD816B] h-[3.625rem] rounded-xl text-white">
-                      Apply now
-                    </button>
-                  </div>
-                  <table class="min-w-full text-center text-sm font-light">
-                    <thead class="border-b font-medium dark:border-neutral-500">
-                      <tr>
-                        <th scope="col" class="px-6 py-4">
-                          Fee Type
-                        </th>
-                        <th scope="col" class="px-6 py-4">
-                          Cost (to Applicat Living in the U.S.)
-                        </th>
-                        <th scope="col" class="px-6 py-4">
-                          Cost (to Applicant Living Abroad)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {trs.map((tr) => {
-                        return (
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap px-6 py-4 font-medium text-left">
-                              {tr.freeType}
-                            </td>
-                            <td class="whitespace-nowrap px-6 py-4">
-                              {" "}
-                              {tr.cost}
-                            </td>
-                            <td class="whitespace-nowrap px-6 py-4">
-                              {" "}
-                              {tr.costAbroad}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                  <p className="flex justify-end text-right">
-                    Fees are subject to change, please use this calculator
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div>
+          <FAQ />
         </div>
       </div>
     </>
