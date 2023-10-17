@@ -1,11 +1,18 @@
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/navbar";
 
 function App() {
-  const Timeleft = [
+  const [Timeleft, setTimeleft] = useState([
     { value: 27, unit: "DAYS" },
     { value: 24, unit: "HOURS" },
     { value: 60, unit: "MINUTES" },
-    { value: 60, unit: "SECONDS" },
+    { value: 60, unit: "MINUTES" },
+  ]);
+  const fileds = [
+    "First Name",
+    "Last Name",
+    "Email address",
+    "Your Email Again",
   ];
   const Lists = [
     {
@@ -34,53 +41,289 @@ function App() {
       src: "/lovely.png",
     },
   ];
+  useEffect(() => {
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 8, 2023 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      // setTimeleft([
+      //   ...Timeleft,
+      //   { value: seconds.toString(), unit: "SECONDS" },
+      // ]);
+    }, 1000);
+  }, []);
+  const trs = [
+    {
+      freeType: " Family Sponsorship Form (I-130)",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: " Green Card Application Form (I-485)",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: " Financial Support Form (I-864)",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: " Work Permit Application Form (I-765) (optional)",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: " Travel Permit Application Form (I-131) (optional)",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: "State Department Processing",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: "USCIS Immigrant Fee",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: "Medical Examination",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+    {
+      freeType: "Total",
+      cost: "$535",
+      costAbroad: "$535",
+    },
+  ];
   return (
     <>
       <div className=" flex flex-col justify-start w-full h-full bg-cover bg-[url('/home.gif')]">
         <Navbar />
-        <div className="flex w-64 h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
-          <h1 className="text-green-500 text-6xl not-italic font-bold whitespace-nowrap">
-            Win the right to live
-          </h1>
-          <p className="text-6xl not-italic font-bold text-white whitespace-nowrap">
-            in the USA!
-          </p>
-        </div>
-        <div className="flex flex-row ">
-          <div className="w-[0.375rem] h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
-          <p className=" w-[14.75rem] h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
-            The official deadline is running, so hurry up and{" "}
-            <span className=" text-2xl not-italic font-medium underline text-white">
-              {" "}
-              apply here!
-            </span>
-          </p>
-          {Timeleft.map((time) => {
-            return (
-              <div className="w-[5.625rem] h-[5.5625rem] rounded-2xl bg-gray-900 ml-[0.88rem] flex justify-center items-center content-around ">
-                <p className="w-16 h-10 flex flex-col flex-shrink-0 text-center justify-center ">
-                  <span className="text-4xl not-italic font-black text-white ">
-                    {time.value}
-                  </span>
-                  <span className=" text-blue-200 text-center text-xs not-italic font-light">
-                    {time.unit}
-                  </span>
-                </p>
+        <div className="flex flex-row">
+          <div className="flex flex-col">
+            <div className="flex w-64 h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
+              <h1 className="text-green-500 text-6xl not-italic font-bold whitespace-nowrap">
+                Win the right to live
+              </h1>
+              <p className="text-6xl not-italic font-bold text-white whitespace-nowrap">
+                in the USA!
+              </p>
+            </div>
+            <div className="flex flex-row ">
+              <div className="w-[0.375rem] h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
+              <p className=" w-[14.75rem] h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
+                The official deadline is running, so hurry up and{" "}
+                <span className=" text-2xl not-italic font-medium underline text-white">
+                  {" "}
+                  apply here!
+                </span>
+              </p>
+              {Timeleft.map((time) => {
+                return (
+                  <div className="w-[5.625rem] h-[5.5625rem] rounded-2xl bg-gray-900 ml-[0.88rem] flex justify-center items-center content-around ">
+                    <p className="w-16 h-10 flex flex-col flex-shrink-0 text-center justify-center ">
+                      <span className="text-4xl not-italic font-black text-white ">
+                        {time.value}
+                      </span>
+                      <span className=" text-blue-200 text-center text-xs not-italic font-light">
+                        {time.unit}
+                      </span>
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="ml-[4.9rem] mt-[3.06rem] mb-[9.94rem] flex flex-col">
+              {Lists.map((list) => {
+                return (
+                  <div className="flex w-64 h-12 flex-row  flex-shrink-0">
+                    <img className="w-[1.9rem] h-[1.9rem]" src={list.src} />
+                    <p className="ml-[1.06rem] text-base not-italic font-medium text-white whitespace-nowrap">
+                      {list.discription}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w-[41.85rem] h-[41.56rem] flex-shrink-0 bg-white rounded-3xl ml-6 mr-[5.1rem] mt-[4.56rem] p-[3.56rem] ">
+            <img src="checkout.png" />
+            <div className="flex  flex-col justify-center flex-shrink-0">
+              <h1 className=" flex-shrink-0 my-[1rem] text-6xl not-italic font-bold whitespace-nowrap text-[#01264A] text-center">
+                Green card eligibility
+              </h1>
+              <div className="  grid grid-cols-2 gap-4 ">
+                {fileds.map((filed) => {
+                  return (
+                    <input
+                      className=" w-[17.3rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                      placeholder={filed}
+                    />
+                  );
+                })}
+                <div className="flex flex-col mt-2 gap-4">
+                  <select
+                    className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                    placeholder=""
+                    name="birth"
+                    id="birth"
+                  >
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="Your country of birth"
+                    >
+                      Your country of birth
+                    </option>
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="canada"
+                    >
+                      Canada
+                    </option>
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="usa"
+                    >
+                      USA
+                    </option>
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="france"
+                    >
+                      France
+                    </option>
+                  </select>
+                  <select
+                    className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                    placeholder=""
+                    name="birth"
+                    id="birth"
+                  >
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="Your country of birth"
+                    >
+                      Marial Status
+                    </option>
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="canada"
+                    >
+                      single
+                    </option>
+                    <option
+                      className="text-2xl italic font-light p-4 "
+                      value="usa"
+                    >
+                      married
+                    </option>
+                  </select>
+                  <div class="flex items-center">
+                    <input
+                      checked
+                      id="checked-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="checked-checkbox"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 whitespace-nowrap"
+                    >
+                      Yes, I finished high school OR I have qualifying training.
+                    </label>
+                  </div>
+                  <button className="w-[34.4rem] bg-[#4AC97D] h-[3.625rem] rounded-xl text-white">
+                    Continue
+                  </button>
+                </div>
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
-        <div className="ml-[4.9rem] mt-[3.06rem] mb-[9.94rem] flex flex-col">
-          {Lists.map((list) => {
-            return (
-              <div className="flex w-64 h-12 flex-row  flex-shrink-0">
-                <img className="w-[1.9rem] h-[1.9rem]" src={list.src} />
-                <p className="ml-[1.06rem] text-base not-italic font-medium text-white whitespace-nowrap">
-                  {list.discription}
-                </p>
+      </div>
+
+      <div className="bg-gray-100 flex flex-col justify-start">
+        <p className="mt-[5rem] ml-[7.12rem] text-xl font-medium text-gray-900 whitespace-nowrap">
+          Find the right visa for you!
+        </p>
+        <h1 className=" mt-[4.37rem] mb-[3.21rem] ml-[4.95rem] text-5xl not-italic font-light text-[#4AC97D]">
+          Diversity Visa Cost
+        </h1>
+        <div className="ml-[15rem] mr-[18rem] rounded-3xl bg-white">
+          <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <div class="overflow-hidden p-8">
+                  <div className="flex justify-between">
+                    <p className="ml-2 text-sm font-medium text-gray-900 whitespace-nowrap">
+                      Mandatory Government Fees for Green Cards
+                    </p>{" "}
+                    <button className="w-[12.75rem] bg-[#FD816B] h-[3.625rem] rounded-xl text-white">
+                      Apply now
+                    </button>
+                  </div>
+                  <table class="min-w-full text-center text-sm font-light">
+                    <thead class="border-b font-medium dark:border-neutral-500">
+                      <tr>
+                        <th scope="col" class="px-6 py-4">
+                          Fee Type
+                        </th>
+                        <th scope="col" class="px-6 py-4">
+                          Cost (to Applicat Living in the U.S.)
+                        </th>
+                        <th scope="col" class="px-6 py-4">
+                          Cost (to Applicant Living Abroad)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {trs.map((tr) => {
+                        return (
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap px-6 py-4 font-medium text-left">
+                              {tr.freeType}
+                            </td>
+                            <td class="whitespace-nowrap px-6 py-4">
+                              {" "}
+                              {tr.cost}
+                            </td>
+                            <td class="whitespace-nowrap px-6 py-4">
+                              {" "}
+                              {tr.costAbroad}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <p className="flex justify-end text-right">
+                    Fees are subject to change, please use this calculator
+                  </p>
+                </div>
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
       </div>
     </>
