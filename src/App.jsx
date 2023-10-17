@@ -36,7 +36,7 @@ function App() {
   ];
   return (
     <>
-      <div className=" top-0 w-full h-full bg-cover bg-[url('/home.gif')]">
+      <div className=" flex flex-col justify-start w-full h-full bg-cover bg-[url('/home.gif')]">
         <Navbar />
         <div className="flex w-64 h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
           <h1 className="text-green-500 text-6xl not-italic font-bold whitespace-nowrap">
