@@ -6,7 +6,7 @@ export default function Navbar() {
       <img src="/logo.png"></img>
       <div className="flex justify-center items-center">
         <Dropdown animation="fade" color="red" />
-        <button className="flex w-48 h-16 flex-col justify-center items-center rounded text-white border-2 border-zinc-50  text-center text-base not-italic font-bold">
+        <button className="hover:bg-green-500 flex w-48 h-16 flex-col justify-center items-center rounded text-white border-2 border-zinc-50  text-center text-base not-italic font-bold">
           LIVE CHAT
         </button>
       </div>

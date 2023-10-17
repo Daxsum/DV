@@ -7,7 +7,7 @@ function App() {
     { value: 27, unit: "DAYS" },
     { value: 24, unit: "HOURS" },
     { value: 60, unit: "MINUTES" },
-    { value: 60, unit: "MINUTES" },
+    // { value: 60, unit: "MINUTES" },
   ]);
   const fileds = [
     "First Name",
@@ -63,10 +63,10 @@ function App() {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      // setTimeleft([
-      //   ...Timeleft,
-      //   { value: seconds.toString(), unit: "SECONDS" },
-      // ]);
+      setTimeleft([
+        ...Timeleft,
+        { value: seconds.toString(), unit: "SECONDS" },
+      ]);
     }, 1000);
   }, []);
 
