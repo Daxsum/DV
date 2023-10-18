@@ -72,11 +72,11 @@ function App() {
 
   return (
     <>
-      <div className=" flex flex-col justify-start w-full h-full bg-cover bg-[url('/home.gif')]">
+      <div className=" flex flex-col justify-start max-w-full min-w-0 max-h-full bg-cover bg-[url('/home.gif')]">
         <Navbar />
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <div className="flex w-64 h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
+            <div className="flex max-w-64 max-h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
               <h1 className="text-green-500 text-6xl not-italic font-bold whitespace-nowrap">
                 Win the right to live
               </h1>
@@ -85,8 +85,8 @@ function App() {
               </p>
             </div>
             <div className="flex flex-row ">
-              <div className="w-[0.375rem] h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
-              <p className=" w-[14.75rem] h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
+              <div className="w-[0.375rem] max-h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
+              <p className=" max-w-[14.75rem] max-h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
                 The official deadline is running, so hurry up and{" "}
                 <span className=" text-2xl not-italic font-medium underline text-white">
                   {" "}

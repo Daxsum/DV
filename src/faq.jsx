@@ -55,16 +55,16 @@ export default function FAQ() {
       <div className="dropdown-wrapper relative m-0">
         <button
           onClick={() => setShow(!show)}
-          className={`bg-gray-100mt-[4.37rem]  mb-[3.21rem] ml-[4.95rem] text-5xl not-italic font-light text-[#4AC97D] whitespace-no-wrap rounded transition duration-300`}
+          className={`bg-gray-100mt-[4.37rem]  mb-[3.21rem] ml-[4.95rem] text-5xl  not-italic font-light text-[#4AC97D] whitespace-no-wrap rounded transition duration-300`}
         >
           Diversity Visa Cost
         </button>
-        <i className=" ml-2 text-white">V</i>
+        <i className=" ml-2 text-gray-200">V</i>
         {show && (
           <div
-            className={`bg-gray-100 dropdown-menu  mt-1 rounded absolute z-10 shadow-lg w-full  fade`}
+            className={`bg-gray-100 dropdown-menu  mt-1 rounded absolute z-10 shadow-lg max-w-full min-w-0  fade`}
           >
-            <div className="ml-[15rem] mr-[18rem] rounded-3xl bg-white">
+            <div className="ml-[15rem] mr-[18rem] rounded-3xl bg-white ">
               <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -73,17 +73,17 @@ export default function FAQ() {
                         <p className="ml-2 text-sm font-medium text-gray-900 whitespace-nowrap">
                           Mandatory Government Fees for Green Cards
                         </p>{" "}
-                        <button className="w-[12.75rem] bg-[#FD816B] h-[3.625rem] rounded-xl text-white">
+                        <button className="max-w-[12.75rem] bg-[#FD816B] max-h-[3.625rem] rounded-xl text-white">
                           Apply now
                         </button>
                       </div>
                       <table class="min-w-full text-center text-sm font-light">
-                        <thead class="border-b font-medium dark:border-neutral-500">
+                        <thead class="border-b font-medium ">
                           <tr>
                             <th scope="col" class="px-6 py-4 text-left">
                               Fee Type
                             </th>
-                            <th scope="col" class="px-6 py-4">
+                            <th scope="col" class="max-px-6 max-py-4">
                               Cost (to Applicat Living in the U.S.)
                             </th>
                             <th scope="col" class="px-6 py-4">
@@ -94,7 +94,7 @@ export default function FAQ() {
                         <tbody>
                           {trs.map((tr) => {
                             return (
-                              <tr class="border-b dark:border-neutral-500">
+                              <tr class="border-b ">
                                 <td class=" text-black text-base not-italic font-light whitespace-nowrap px-6 py-4 text-left">
                                   {tr.freeType}
                                 </td>
