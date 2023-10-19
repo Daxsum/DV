@@ -88,7 +88,7 @@ function App() {
               <div className="w-[0.375rem] max-h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
               <p className=" max-w-[14.75rem] max-h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
                 The official deadline is running, so hurry up and{" "}
-                <span className=" text-2xl not-italic font-medium underline text-white">
+                <span className=" text-2xl not-italic font-medium underline text-white p-4">
                   {" "}
                   apply here!
                 </span>
