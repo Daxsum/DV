@@ -66,7 +66,7 @@ function App() {
   }, []);
 
   return (
-    <div className="p-4">
+    <div className="">
       <div className=" flex flex-col justify-between max-w-full min-w-0 max-h-full bg-cover bg-[url('/home.gif')]">
         <div className="flex justify-center">
           <Navbar />
