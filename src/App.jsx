@@ -228,7 +228,8 @@ function App() {
           Find the right visa for you!
         </p>
         <div>
-          <FAQ />
+          <FAQ content={false} title={"  Diversity Visa Cost"} />
+          <FAQ content={true} title="Diversity Visa FAQs" />
         </div>
       </div>
     </>

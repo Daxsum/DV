@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function FAQ() {
+export default function FAQ({ content, title }) {
   const [show, setShow] = useState(true);
   const trs = [
     {
@@ -59,7 +59,7 @@ export default function FAQ() {
             onClick={() => setShow(!show)}
             className={`bg-gray-100mt-[4.37rem] w-full text-left  mb-[3.21rem] ml-[4.95rem] text-5xl  not-italic font-light text-[#4AC97D] whitespace-no-wrap rounded transition duration-300`}
           >
-            Diversity Visa Cost
+            {title}
           </button>
           {!show ? (
             <svg
@@ -83,7 +83,8 @@ export default function FAQ() {
             </svg>
           )}
         </div>
-        {show && (
+
+        {show && !content && (
           <div
             className={`bg-gray-100 dropdown-menu  mt-1 rounded absolute z-10 shadow-lg max-w-full min-w-0  fade`}
           >
