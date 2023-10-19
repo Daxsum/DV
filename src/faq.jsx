@@ -73,7 +73,7 @@ export default function FAQ() {
                         <p className="ml-2 text-sm font-medium text-gray-900 whitespace-nowrap">
                           Mandatory Government Fees for Green Cards
                         </p>{" "}
-                        <button className="max-w-[12.75rem] bg-[#FD816B] max-h-[3.625rem] rounded-xl text-white">
+                        <button className="max-w-[12.75rem] bg-[#FD816B] max-h-[3.625rem] rounded-xl text-white p-2">
                           Apply now
                         </button>
                       </div>
