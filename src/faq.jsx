@@ -86,7 +86,7 @@ export default function FAQ({ content, title }) {
 
         {show && !content && (
           <div
-            className={`bg-gray-100 dropdown-menu  mt-1 rounded absolute z-10 shadow-lg max-w-full min-w-0  fade`}
+            className={`bg-gray-100 dropdown-menu  mt-4 rounded  shadow-lg max-w-full min-w-0  fade`}
           >
             <div className="ml-[15rem] mr-[18rem] rounded-3xl bg-white ">
               <div class="flex flex-col">

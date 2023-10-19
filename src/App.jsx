@@ -232,6 +232,66 @@ function App() {
           <FAQ content={true} title="Diversity Visa FAQs" />
         </div>
       </div>
+      <section className="footer">
+        <div className="footer-top">
+          <img alt="logo" src="/logo.png" />
+
+          <div className="footer-links">
+            <a target="_blank" href="/" rel="noreferrer">
+              Terms of Service
+            </a>
+            <a target="_blank" href="/" rel="noreferrer">
+              Privacy Policy
+            </a>
+            <a href="/" target="_blank" rel="noreferrer">
+              Legal Disclaimer
+            </a>
+            <a href="/" target="_blank" rel="noreferrer">
+              Refund Policy
+            </a>
+            <a
+              href="/
+"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Terms of Use
+            </a>
+          </div>
+        </div>
+        <div className="line"></div>
+        <div className="footer-text">
+          Disclaimer: GovAssist is not affiliated with any United States
+          government agency or department. Costs for consulting services do NOT
+          include any government application, medical examination, filing, or
+          biometric fees. This website does not provide legal advice and we are
+          not a law firm. None of our customer service representatives are
+          lawyers and they also do not provide legal advice. We are a private,
+          internet-based travel and immigration consultancy provider dedicated
+          to helping individuals travel to the United States. You may apply by
+          yourself directly at travel.state.gov or at uscis.gov. GovAssist is
+          affiliated with the UT law firm GovAssist Legal which provides legal
+          services on immigration matters. Only licensed immigration
+          professionals can provide advice, explanation, opinion, or
+          recommendation about possible legal rights, remedies, defenses,
+          options, selection of forms or strategies.
+        </div>
+      </section>
+      <section
+        style={{
+          background: "#011527",
+          width: "100%",
+          height: 80,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          textAlign: "center",
+        }}
+        className="mobile-footer"
+      >
+        Copyright © 2016-2023 GovAssist, LLC All Rights Reserved
+      </section>
     </>
   );
 }
