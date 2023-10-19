@@ -43,18 +43,13 @@ function App() {
     },
   ];
   useEffect(() => {
-    // Set the date we're counting down to
-    var countDownDate = new Date("Nov 8, 2023 15:37:25").getTime();
+    var countDownDate = new Date("Nov 8, 2023 12:34:85").getTime();
 
-    // Update the count down every 1 second
     var x = setInterval(function () {
-      // Get today's date and time
       var now = new Date().getTime();
 
-      // Find the distance between now and the count down date
       var distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -62,7 +57,7 @@ function App() {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Output the result in an element with id="demo"
+      // this is just for the dismostration perpose
       setTimeleft([
         ...Timeleft,
         { value: seconds.toString(), unit: "SECONDS" },
@@ -71,7 +66,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="p-4">
       <div className=" flex flex-col justify-between max-w-full min-w-0 max-h-full bg-cover bg-[url('/home.gif')]">
         <div className="flex justify-center">
           <Navbar />
@@ -233,31 +228,29 @@ function App() {
         </div>
       </div>
       <section className="footer">
-        <div className="footer-top">
+        <div className="footer-top ">
           <img alt="logo" src="/logo.png" />
 
-          <div className="footer-links">
-            <a target="_blank" href="/" rel="noreferrer">
-              Terms of Service
-            </a>
-            <a target="_blank" href="/" rel="noreferrer">
-              Privacy Policy
-            </a>
-            <a href="/" target="_blank" rel="noreferrer">
-              Legal Disclaimer
-            </a>
-            <a href="/" target="_blank" rel="noreferrer">
-              Refund Policy
-            </a>
-            <a
-              href="/
+          <a target="_blank" href="/" rel="noreferrer">
+            Terms of Service
+          </a>
+          <a target="_blank" href="/" rel="noreferrer">
+            Privacy Policy
+          </a>
+          <a href="/" target="_blank" rel="noreferrer">
+            Legal Disclaimer
+          </a>
+          <a href="/" target="_blank" rel="noreferrer">
+            Refund Policy
+          </a>
+          <a
+            href="/
 "
-              target="_blank"
-              rel="noreferrer"
-            >
-              Terms of Use
-            </a>
-          </div>
+            target="_blank"
+            rel="noreferrer"
+          >
+            Terms of Use
+          </a>
         </div>
         <div className="line"></div>
         <div className="footer-text">
@@ -292,7 +285,7 @@ function App() {
       >
         Copyright © 2016-2023 GovAssist, LLC All Rights Reserved
       </section>
-    </>
+    </div>
   );
 }
 
