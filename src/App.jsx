@@ -72,8 +72,10 @@ function App() {
 
   return (
     <>
-      <div className=" flex flex-col justify-start max-w-full min-w-0 max-h-full bg-cover bg-[url('/home.gif')]">
-        <Navbar />
+      <div className=" flex flex-col justify-between max-w-full min-w-0 max-h-full bg-cover bg-[url('/home.gif')]">
+        <div className="flex justify-center">
+          <Navbar />
+        </div>
         <div className="flex flex-row">
           <div className="flex flex-col">
             <div className="flex max-w-64 max-h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
@@ -88,7 +90,7 @@ function App() {
               <div className="w-[0.375rem] max-h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
               <p className=" max-w-[14.75rem] max-h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
                 The official deadline is running, so hurry up and{" "}
-                <span className=" text-2xl not-italic font-medium underline text-white p-4">
+                <span className=" text-2xl not-italic font-medium underline text-white ">
                   {" "}
                   apply here!
                 </span>
@@ -121,96 +123,99 @@ function App() {
               })}
             </div>
           </div>
-          <div className="w-[41.85rem] h-[41.56rem] flex-shrink-0 bg-white rounded-3xl ml-6 mr-[5.1rem] mt-[4.56rem] p-[3.56rem] ">
-            <img src="checkout.png" />
-            <div className="flex  flex-col justify-center flex-shrink-0">
-              <h1 className=" flex-shrink-0 my-[1rem] text-6xl not-italic font-bold whitespace-nowrap text-[#01264A] text-center">
-                Green card eligibility
-              </h1>
-              <div className="  grid grid-cols-2 gap-4 ">
-                {fileds.map((filed) => {
-                  return (
-                    <input
-                      className=" w-[17.3rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
-                      placeholder={filed}
-                    />
-                  );
-                })}
-                <div className="flex flex-col mt-2 gap-4">
-                  <select
-                    className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
-                    placeholder=""
-                    name="birth"
-                    id="birth"
-                  >
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="Your country of birth"
+          <div className=" ml-64">
+            <div className="w-[41.85rem] h-[41.56rem] flex-shrink-0 bg-white rounded-3xl ml-6 mr-[5.1rem] mt-[0.56rem] p-[3.56rem] ">
+              <img src="checkout.png" />
+              <div className="flex  flex-col justify-center flex-shrink-0">
+                <h1 className=" flex-shrink-0 my-[1rem] text-6xl not-italic font-bold whitespace-nowrap text-[#01264A] text-center">
+                  Green card eligibility
+                </h1>
+                <div className="  grid grid-cols-2 gap-4 ">
+                  {fileds.map((filed) => {
+                    return (
+                      <input
+                        className=" w-[17.3rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                        placeholder={filed}
+                      />
+                    );
+                  })}
+                  <div className="flex flex-col mt-2 gap-4">
+                    <select
+                      className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                      placeholder=""
+                      name="birth"
+                      id="birth"
                     >
-                      Your country of birth
-                    </option>
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="canada"
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="Your country of birth"
+                      >
+                        Your country of birth
+                      </option>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="canada"
+                      >
+                        Canada
+                      </option>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="usa"
+                      >
+                        USA
+                      </option>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="france"
+                      >
+                        France
+                      </option>
+                    </select>
+                    <select
+                      className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
+                      placeholder=""
+                      name="birth"
+                      id="birth"
                     >
-                      Canada
-                    </option>
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="usa"
-                    >
-                      USA
-                    </option>
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="france"
-                    >
-                      France
-                    </option>
-                  </select>
-                  <select
-                    className=" w-[34.75rem] h-[3.6rem] rounded-2xl bg-[#F3F3F3] placeholder:text-2xl italic font-light p-4 mr-[3.06rem] "
-                    placeholder=""
-                    name="birth"
-                    id="birth"
-                  >
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="Your country of birth"
-                    >
-                      Marial Status
-                    </option>
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="canada"
-                    >
-                      single
-                    </option>
-                    <option
-                      className="text-2xl italic font-light p-4 "
-                      value="usa"
-                    >
-                      married
-                    </option>
-                  </select>
-                  <div class="flex items-center">
-                    <input
-                      checked
-                      id="checked-checkbox"
-                      type="checkbox"
-                      value=""
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label
-                      for="checked-checkbox"
-                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 whitespace-nowrap"
-                    >
-                      Yes, I finished high school OR I have qualifying training.
-                    </label>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="Your country of birth"
+                      >
+                        Marial Status
+                      </option>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="canada"
+                      >
+                        single
+                      </option>
+                      <option
+                        className="text-2xl italic font-light p-4 "
+                        value="usa"
+                      >
+                        married
+                      </option>
+                    </select>
+                    <div class="flex items-center">
+                      <input
+                        checked
+                        id="checked-checkbox"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="checked-checkbox"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 whitespace-nowrap"
+                      >
+                        Yes, I finished high school OR I have qualifying
+                        training.
+                      </label>
+                    </div>
+                    <button className="w-[34.4rem] bg-[#4AC97D] h-[3.625rem] rounded-xl text-white">
+                      Continue
+                    </button>
                   </div>
-                  <button className="w-[34.4rem] bg-[#4AC97D] h-[3.625rem] rounded-xl text-white">
-                    Continue
-                  </button>
                 </div>
               </div>
             </div>
