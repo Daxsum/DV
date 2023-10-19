@@ -76,7 +76,7 @@ function App() {
         <div className="flex justify-center">
           <Navbar />
         </div>
-        <div className="flex flex-row">
+        <div className=" grid  md:grid-cols-2">
           <div className="flex flex-col">
             <div className="flex max-w-64 max-h-64 flex-col justify-center flex-shrink-0 ml-[4.8rem] mt-[1.56rem]">
               <h1 className="text-green-500 text-6xl not-italic font-bold whitespace-nowrap">
@@ -86,13 +86,13 @@ function App() {
                 in the USA!
               </p>
             </div>
-            <div className="flex flex-row ">
+            <div className="flex sm:grid-cols-3 ">
               <div className="w-[0.375rem] max-h-[6.0625rem] bg-gray-400 ml-[5.31rem]"></div>
               <p className=" max-w-[14.75rem] max-h-[6.185rem]  ml-[1rem] text-2xl not-italic font-medium text-white">
                 The official deadline is running, so hurry up and{" "}
                 <span className=" text-2xl not-italic font-medium underline text-white ">
                   {" "}
-                  apply here!
+                  <a href="/">apply here!</a>
                 </span>
               </p>
               {Timeleft.map((time) => {
@@ -123,7 +123,7 @@ function App() {
               })}
             </div>
           </div>
-          <div className=" ml-64">
+          <div className=" ">
             <div className="w-[41.85rem] h-[41.56rem] flex-shrink-0 bg-white rounded-3xl ml-6 mr-[5.1rem] mt-[0.56rem] p-[3.56rem] ">
               <img src="checkout.png" />
               <div className="flex  flex-col justify-center flex-shrink-0">

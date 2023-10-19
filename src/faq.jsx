@@ -49,17 +49,40 @@ export default function FAQ() {
       costAbroad: "$1200",
     },
   ];
+
   return (
     <div className="m-0">
       {" "}
       <div className="dropdown-wrapper relative m-0">
-        <button
-          onClick={() => setShow(!show)}
-          className={`bg-gray-100mt-[4.37rem]  mb-[3.21rem] ml-[4.95rem] text-5xl  not-italic font-light text-[#4AC97D] whitespace-no-wrap rounded transition duration-300`}
-        >
-          Diversity Visa Cost
-        </button>
-        <i className=" ml-2 text-gray-200">V</i>
+        <div className=" flex justify-between p-4">
+          <button
+            onClick={() => setShow(!show)}
+            className={`bg-gray-100mt-[4.37rem] w-full text-left  mb-[3.21rem] ml-[4.95rem] text-5xl  not-italic font-light text-[#4AC97D] whitespace-no-wrap rounded transition duration-300`}
+          >
+            Diversity Visa Cost
+          </button>
+          {!show ? (
+            <svg
+              width="33"
+              height="18"
+              viewBox="0 0 33 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1 1L16.5 16L32 1" stroke="#170A61" stroke-width="2" />
+            </svg>
+          ) : (
+            <svg
+              width="33"
+              height="18"
+              viewBox="0 0 33 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M32 17L16.5 2L1 17" stroke="#170A61" stroke-width="2" />
+            </svg>
+          )}
+        </div>
         {show && (
           <div
             className={`bg-gray-100 dropdown-menu  mt-1 rounded absolute z-10 shadow-lg max-w-full min-w-0  fade`}
